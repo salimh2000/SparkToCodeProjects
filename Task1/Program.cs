@@ -167,7 +167,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         // Task 9 –  Day Name Finder
-        Console.Write("Enter a day number (1-7): ");
+        /*Console.Write("Enter a day number (1-7): ");
         int dayNumber = Convert.ToInt32(Console.ReadLine());
         switch (dayNumber)
         {
@@ -194,6 +194,46 @@ class Program
                 break;
             default:
                 Console.WriteLine("Invalid day number");
+                break;
+        }*/
+        
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        // Task 10 –  Mini Calculator
+        Console.Write("Enter first number: ");
+        double num1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        double num2 = double.Parse(Console.ReadLine());
+        
+        Console.Write("Enter operator (+, -, *, / or %): ");
+        char op = char.Parse(Console.ReadLine());
+        
+        switch (op)
+        {
+            case '+':
+                Console.WriteLine("Result: " + (num1 + num2));
+                break;
+            case '-':
+                Console.WriteLine("Result: " + (num1 - num2));
+                break;
+            case '*':
+                Console.WriteLine("Result: " + (num1 * num2));
+                break;
+            case '/':
+                if (num2 == 0)
+                    Console.WriteLine("Cannot divide by zero");
+                else
+                    Console.WriteLine("Result: " + (num1 / num2));
+                break;
+            case '%':
+                if (num2 == 0)
+                    Console.WriteLine("Cannot divide by zero");
+                else
+                    Console.WriteLine("Result: " + (num1 % num2));
+                break;
+            default:
+                Console.WriteLine("Invalid operator");
                 break;
         }
         
