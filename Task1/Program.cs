@@ -272,7 +272,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         // Task 12 –  Shipping Cost Calculator
-        Console.Write("Enter region code (A = Local, B = National, C = International): ");
+        /*Console.Write("Enter region code (A = Local, B = National, C = International): ");
         char region = char.Parse(Console.ReadLine().ToUpper());
         
         Console.Write("Enter package weight (kg): ");
@@ -315,6 +315,40 @@ class Program
             Console.WriteLine("Base Cost: " + baseCost + " OMR");
             Console.WriteLine("Extra Charge: " + extraCost + " OMR");
             Console.WriteLine("Total Cost: " + totalCost + " OMR");
+        }*/
+        
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        // Task 13 –  Triangle Type Classifier
+        Console.Write("Enter side A: ");
+        double a = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter side B: ");
+        double b = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter side C: ");
+        double c = double.Parse(Console.ReadLine());
+        
+        bool isValid = (a + b > c) && (a + c > b) && (b + c > a);
+
+        if (!isValid)
+        {
+            Console.WriteLine("These sides do NOT form a valid triangle.");
+        }
+        else
+        {
+            if (a == b && b == c)
+            {
+                Console.WriteLine("Valid triangle: Equilateral");
+            }
+            else if (a == b || b == c || a == c)
+            {
+                Console.WriteLine("Valid triangle: Isosceles");
+            }
+            else
+            {
+                Console.WriteLine("Valid triangle: Scalene");
+            }
         }
         
         
