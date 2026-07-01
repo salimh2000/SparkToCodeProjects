@@ -93,7 +93,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         // Task 6 – Temperature Converter
-        Console.Write("Enter temperature in Celsius: ");
+        /*Console.Write("Enter temperature in Celsius: ");
         double celsius = double.Parse(Console.ReadLine());
         
         double fahrenheit = (celsius * 9 / 5) + 32;
@@ -113,8 +113,33 @@ class Program
         }
         
         Console.WriteLine("Fahrenheit: " + fahrenheit);
-        Console.WriteLine("Weather: "    + classification);
-    }
+        Console.WriteLine("Weather: "    + classification);*/
     
-    
+    /////////////////////////////////////////////////////////////////////////////////
+        
+        // Task 7 –  Movie Ticket Pricing
+        Console.Write("Enter your age: ");
+        int age = Convert.ToInt32(Console.ReadLine());
+
+        string category;
+        double price;
+        if (age >= 0 && age <= 12)
+        {
+            category = "Child";
+            price    = 2.000;
+        }
+        else if (age <= 59)
+        {
+            category = "Adult";
+            price    = 5.000;
+        }
+        else
+        {
+            category = "Senior";
+            price    = 3.000;
+        }
+        
+        Console.WriteLine("Category: " + category);
+        Console.WriteLine("Ticket Price: " + price + " OMR");
+    }    
 }
