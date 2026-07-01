@@ -240,7 +240,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         // Task 11 –  Loan Eligibility System
-        Console.Write("Enter your age: ");
+        /*Console.Write("Enter your age: ");
         int age = Convert.ToInt32(Console.ReadLine());
 
         Console.Write("Enter your monthly income (OMR): ");
@@ -267,7 +267,56 @@ class Program
             {
                 Console.WriteLine("Not Eligible: have an existing loan");
             }
+        }*/
+        
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        // Task 12 –  Shipping Cost Calculator
+        Console.Write("Enter region code (A = Local, B = National, C = International): ");
+        char region = char.Parse(Console.ReadLine().ToUpper());
+        
+        Console.Write("Enter package weight (kg): ");
+        double weight = double.Parse(Console.ReadLine());
+
+        double baseCost  = 0;
+        double extraCost = 0;
+        bool validRegion = true;
+        
+        switch (region)
+        {
+            case 'A':
+                baseCost = 1.000;
+                break;
+            case 'B':
+                baseCost = 3.000;
+                break;
+            case 'C':
+                baseCost = 7.000;
+                break;
+            default:
+                Console.WriteLine("Invalid region");
+                validRegion = false;
+                break;
         }
+        
+        if (validRegion)
+        {
+            if (weight > 10)
+            {
+                extraCost = 5.000;  
+            }
+            else if (weight > 5)
+            {
+                extraCost = 2.000;  
+            }
+
+            double totalCost = baseCost + extraCost;
+            
+            Console.WriteLine("Base Cost: " + baseCost + " OMR");
+            Console.WriteLine("Extra Charge: " + extraCost + " OMR");
+            Console.WriteLine("Total Cost: " + totalCost + " OMR");
+        }
+        
         
         
         
