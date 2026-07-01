@@ -200,7 +200,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         // Task 10 –  Mini Calculator
-        Console.Write("Enter first number: ");
+        /*Console.Write("Enter first number: ");
         double num1 = double.Parse(Console.ReadLine());
 
         Console.Write("Enter second number: ");
@@ -235,8 +235,39 @@ class Program
             default:
                 Console.WriteLine("Invalid operator");
                 break;
-        }
+        }*/
         
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        // Task 11 –  Loan Eligibility System
+        Console.Write("Enter your age: ");
+        int age = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter your monthly income (OMR): ");
+        double income = double.Parse(Console.ReadLine());
+
+        Console.Write("Do you have an existing loan? (yes/no): ");
+        bool hasExistingLoan = (Console.ReadLine() == "yes");
+        
+        if (age >= 21 && age <= 60 && income >= 400 && !hasExistingLoan)
+        {
+            Console.WriteLine("Loan Approved: You are eligible.");
+        }
+        else
+        {
+            if (age < 21 || age > 60)
+            {
+                Console.WriteLine("Not Eligible: Age is out of range (21–60)");
+            }
+            else if (income < 400)
+            {
+                Console.WriteLine("Not Eligible: income too low (minimum of 400 OMR)");
+            }
+            else if (hasExistingLoan)
+            {
+                Console.WriteLine("Not Eligible: have an existing loan");
+            }
+        }
         
         
         
