@@ -320,7 +320,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         // Task 13 –  Triangle Type Classifier
-        Console.Write("Enter side A: ");
+        /*Console.Write("Enter side A: ");
         double a = double.Parse(Console.ReadLine());
 
         Console.Write("Enter side B: ");
@@ -349,9 +349,63 @@ class Program
             {
                 Console.WriteLine("Valid triangle: Scalene");
             }
-        }
+        }*/
         
+        /////////////////////////////////////////////////////////////////////////////////
         
+        // Task 14 –  Online Store Checkout
+        Console.Write("Enter product code (1 = Headphones, 2 = Keyboard, 3 = Mouse): ");
+            int productCode = Convert.ToInt32(Console.ReadLine());
+
+            double unitPrice = 0;
+            string productName = "";
+            bool   validProduct = true;
+            
+            switch (productCode)
+            {
+                case 1:
+                    productName = "Headphones";
+                    unitPrice   = 8.500;
+                    break;
+                case 2:
+                    productName = "Keyboard";
+                    unitPrice   = 12.000;
+                    break;
+                case 3:
+                    productName = "Mouse";
+                    unitPrice   = 5.000;
+                    break;
+                default:
+                    Console.WriteLine("Invalid product code");
+                    validProduct = false;
+                    break;
+            }
+            
+            if (validProduct)
+            {
+                Console.Write("Enter quantity: ");
+                int quantity = Convert.ToInt32(Console.ReadLine());
+                
+                Console.Write("Do you have a discount coupon? (yes/no): ");
+                bool hasCoupon = (Console.ReadLine() == "yes");
+                
+                double subtotal = unitPrice * quantity;
+                
+                double discount = 0;
+                if (hasCoupon && subtotal > 20)
+                {
+                    discount = subtotal * 0.10;
+                }
+                double afterDiscount = subtotal - discount;
+                double tax           = afterDiscount * 0.05;
+                double finalTotal = afterDiscount + tax;
+                
+                Console.WriteLine("Checkout of: " + productName);
+                Console.WriteLine("Subtotal: " + subtotal + " OMR");
+                Console.WriteLine("Discount: " + discount + " OMR");
+                Console.WriteLine("Tax (5%): " + tax + " OMR");
+                Console.WriteLine("Total: " + finalTotal + " OMR");
+            }
         
         
         
