@@ -46,7 +46,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         // Task 4 – Voting Eligibility
-        Console.Write("Enter your age: ");
+        /*Console.Write("Enter your age: ");
         int age = Convert.ToInt32(Console.ReadLine());
         
         Console.Write("Do you have a valid national ID? (yes/no): ");
@@ -60,7 +60,34 @@ class Program
         else
         {
             Console.WriteLine("You are not eligible to vote.");
-        }
+        }*/
         
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        // Task 5 – Grade Letter Lookup
+        Console.Write("Enter a grade (A/B/C/D/F): ");
+        char grade = char.Parse(Console.ReadLine());
+        
+        switch (grade)
+        {
+            case 'A':
+                Console.WriteLine("Excellent");
+                break;
+            case 'B':
+                Console.WriteLine("Very Good");
+                break;
+            case 'C':
+                Console.WriteLine("Good");
+                break;
+            case 'D':
+                Console.WriteLine("Pass");
+                break;
+            case 'F':
+                Console.WriteLine("Fail");
+                break;
+            default:
+                Console.WriteLine("Invalid grade");
+                break;
+        }
     }
 }
