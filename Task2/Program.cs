@@ -4,6 +4,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        //Task 1 - Countdown Timer
+        Console.Write("Enter a starting number: ");
+        int start = Convert.ToInt32(Console.ReadLine());
+            
+        for (int i = start; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+            
+        Console.WriteLine("Liftoff!");
+            
+        /////////////////////////////////////////////////////////////////////////////////
     }
 }
