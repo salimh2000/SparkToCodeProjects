@@ -32,18 +32,35 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         //Task 3 - Multiplication Table
-        Console.Write("Enter a number: ");
+        /*Console.Write("Enter a number: ");
         int number = Convert.ToInt32(Console.ReadLine());
         
         for (int i = 1; i <= 10; i++)
         {
             int result = number * i;
             Console.WriteLine(number + " x " + i + " = " + result);
+        }*/
+        
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        //Task 4 - Password Retry
+        string Password = "Spark2026";
+ 
+        Console.Write("Enter password: ");
+        string input = Console.ReadLine();
+        
+        while (input != Password)
+        {
+            Console.WriteLine("Incorrect password, try again");
+            Console.Write("Enter password: ");
+            input = Console.ReadLine();
         }
         
-        
-        
+        Console.WriteLine("Access Granted");
         
 
+        
+        
+        
     }
 }
