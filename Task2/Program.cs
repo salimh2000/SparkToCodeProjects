@@ -87,6 +87,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         //Task 6 - Safe Division Calculator
+        /*
         try
         {
             Console.Write("Enter the first number: ");
@@ -110,13 +111,53 @@ class Program
         catch (FormatException)
         {
             Console.WriteLine("Error: input is not a valid number");
-        }
+        }*/
         // catch (Exception ex)
         // {
         //     Console.WriteLine("Unexpected error: " + ex.Message);
         // }
         
-     
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        //Task 7 - Repeating Menu with Exit Option
+        bool loop = true; 
+ 
+        while (loop)
+        {
+            Console.WriteLine("1");
+            Console.WriteLine("2");
+            Console.WriteLine("3. Exit");
+            Console.Write("Choose an option: ");
+ 
+            try
+            {
+                int input = Convert.ToInt32(Console.ReadLine());
+ 
+                switch (input)
+                {
+                    case 1:
+                        Console.WriteLine("Hello!");
+                        break;
+                    case 2:
+                        Console.WriteLine("Good day!");
+                        break;
+                    case 3:
+                        Console.WriteLine("Exit");
+                        loop = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid option. Please enter 1, 2, or 3.");
+                        break;
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid option. Please enter 1, 2, or 3.");
+            }
+        }
+
+        
+        
         
         
     }
