@@ -159,7 +159,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         //Task 8 - Sum of Even Numbers Only
-        Console.Write("Enter a positive whole number: ");
+        /*Console.Write("Enter a positive whole number: ");
         int n   = Convert.ToInt32(Console.ReadLine());
         int sum = 0;
  
@@ -170,11 +170,48 @@ class Program
                 sum += i;
             }
         }
-        Console.WriteLine("Sum of even numbers from 1 to " + n + " is " + sum);
+        Console.WriteLine("Sum of even numbers from 1 to " + n + " is " + sum);*/
         
+        /////////////////////////////////////////////////////////////////////////////////
         
+        //Task 9 - Validated Positive Number Input
+        int number = 0; 
+        bool valid = false;  
         
+        do
+        {
+            try
+            {
+                Console.Write("Enter a positive whole number: ");
+                number = Convert.ToInt32(Console.ReadLine());
+                
+                if (number <= 0)
+                {
+                    Console.WriteLine("Error: The number must be greater than zero.");
+                }
+                else
+                {
+                    valid = true;
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error: input is not a valid whole number");
+            }
+ 
+        } while (!valid);
         
+        int sum = 0;
+        for (int i = 1; i <= number; i++)
+        {
+            sum += i;
+        }
+ 
+        Console.WriteLine("Sum from 1 to " + number + " is " + sum);
+        
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        //Task 10 - Simple ATM Simulation
         
     }
 }
