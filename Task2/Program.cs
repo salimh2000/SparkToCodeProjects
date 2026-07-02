@@ -120,7 +120,7 @@ class Program
         /////////////////////////////////////////////////////////////////////////////////
         
         //Task 7 - Repeating Menu with Exit Option
-        bool loop = true; 
+        /*bool loop = true; 
  
         while (loop)
         {
@@ -154,8 +154,24 @@ class Program
             {
                 Console.WriteLine("Invalid option. Please enter 1, 2, or 3.");
             }
-        }
+        }*/
 
+        /////////////////////////////////////////////////////////////////////////////////
+        
+        //Task 8 - Sum of Even Numbers Only
+        Console.Write("Enter a positive whole number: ");
+        int n   = Convert.ToInt32(Console.ReadLine());
+        int sum = 0;
+ 
+        for (int i = 1; i <= n; i++)
+        {
+            if (i % 2 == 0)
+            {
+                sum += i;
+            }
+        }
+        Console.WriteLine("Sum of even numbers from 1 to " + n + " is " + sum);
+        
         
         
         
